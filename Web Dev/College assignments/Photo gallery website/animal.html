@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal</title>
+    <!-- <link rel="stylesheet" href="style-nature.css"> -->
+
+    <style>
+        *{
+    margin: 0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+body{
+    
+    background-image: url(back4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    font-family: sans-serif;
+    font-size: 25px;
+    
+    
+}
+.bar{
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+.bar ul{
+    
+    display: inline-flex;
+    list-style: none;
+}
+.bar ul li
+{
+   
+    width: 120px;
+    margin:15px;
+    padding:15px;
+    
+
+}
+.bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.active2,.bar ul li:hover
+{
+    background:grey;
+    border-radius:40px
+
+}
+.sub-bar1{
+  display: none; 
+ 
+}
+.bar ul li:hover .sub-bar1{
+    display: block;
+    position:absolute;
+    background: grey;
+    border:2px solid white;
+   
+    border-radius: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+
+}
+.bar ul li:hover .sub-bar1 ul{
+   
+    display: block;
+    margin: 10px;
+    
+}
+.bar ul li:hover .sub-bar1 ul li{
+    
+    width:150px;
+    padding:10px;
+    border-bottom:1px dotted white ;
+    background: transparent;
+}
+.bar ul li:hover .sub-bar1 ul li:last-child{
+    border-bottom: none;  
+}
+.bar ul li:hover .sub-bar1 ul li a:hover{
+    color: black;
+}
+
+
+/* content */
+
+.avi{
+    color:whitesmoke;
+    text-align: center;
+   
+    margin-top: 30px;
+    font-family: cursive;
+    font-size: 100px;
+}
+
+ /* image design */
+ .heading {
+            color: white;
+            font-family: cursive;
+            font-size: 50px;
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+        .img {
+            border: 5px solid white;
+            backdrop-filter: blur(5px);
+            padding-bottom: 75px;
+            margin: 10px;
+            border-radius: 30px;
+
+        }
+        .pics{
+           
+            /* padding-left: 0px; */
+            /* margin-left:50px;
+            margin-top: 5px;
+            padding-top: 5px; */
+            margin-left: 75px;
+            margin-top: 75px;
+            display: inline-flex;
+        
+            border-radius: 5px;
+            
+        }
+        .pics:hover{
+            border: 2px solid white;
+            box-shadow: 0px 0px  20px rgb(255, 0, 0);   
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <ul>
+            <li class="active"> <a href="Menu.html"><img src="Home-logo.png"/></a></li>
+
+            <li class="active2"> <a href="animal.html"><img src="list.png"/></a>
+                <div class="sub-bar1">
+                    <ul>
+                        <li><a href="nature.html">Nature</a></li>
+                        <li><a href="ocean.html">Ocean</a></li>
+                        <li><a href="space.html">Space</a></li>
+                        <li><a href="animal.html">Animal</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <a href="about.html"><img src="info.png"/></a></li>
+            <li> <a href="contact.html"><img src="phon.png"/></a></li>
+        </ul>
+
+       
+    </div>
+    <div class="heading">
+        <h2>Animal</h2>
+    </div>
+
+    <!-- image tags -->
+
+    <div class="img">
+        <div class="pics">
+            <img src="animal1.jpg" height="400" width="400" alt="error">
+
+        </div>
+
+        <div class="pics">
+            <img src="animal2.jpg" height="400" width="400" alt="error">
+
+        </div>
+
+        <div class="pics">
+
+            <img src="animal3.jpg" height="400" width="400" alt="error">
+        </div>
+
+        <div class="pics">
+            <img src="animal4.jpg" height="400" width="400" alt="error">
+
+        </div>
+
+        <div class="pics">
+            <img src="animal5.jpg" height="400" width="400" alt="error">
+
+        </div>
+
+        <div class="pics">
+            <img src="animal6.jpg" height="400" width="400" alt="error">
+
+        </div>
+
+    </div>
+</body>
+</html>

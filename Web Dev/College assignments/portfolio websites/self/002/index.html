@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lokesh-Ghosh/portfolio</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+   
+   
+   
+    <!-- css starts -->
+    <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+        :root {
+          --yellow: #eb3b1c;
+        }
+        
+        * {
+          font-family: "Nunito", sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          text-decoration: none;
+          outline: none;
+          border: none;
+          text-transform: capitalize;
+          transition: all 0.2s linear;
+        }
+        
+        *::selection {
+          background: var(--yellow);
+          color: #333;
+        }
+        
+        html {
+          font-size: 62.5%;
+          overflow-x: hidden;
+        }
+        
+        html::-webkit-scrollbar {
+          width: 1.4rem;
+        }
+        
+        html::-webkit-scrollbar-track {
+          background: #222;
+        }
+        
+        html::-webkit-scrollbar-thumb {
+          background: var(--yellow);
+        }
+        
+        body {
+          background: rgb(0, 0, 0);
+          overflow-x: hidden;
+          padding-left: 35rem;
+        }
+        
+        section {
+          min-height: 100vh;
+          padding: 1rem;
+        }
+        
+        .btn {
+          padding: 0.7rem 3rem;
+          background: #333;
+          color: #fff;
+          cursor: pointer;
+          margin-top: 1rem;
+          font-size: 2rem;
+          border-radius: 5rem;
+        }
+        
+        .btn i {
+          padding: 0 0.5rem;
+          font-size: 1.8rem;
+        }
+        
+        .btn:hover {
+          background: var(--yellow);
+        }
+        
+        .heading {
+          text-align: center;
+          margin: 0 6rem;
+          font-size: 4rem;
+          padding: 1rem;
+          border-bottom: 0.1rem solid #fff4;
+          color: #fff;
+        }
+        
+        .heading span {
+          color: var(--yellow);
+        }
+        
+        header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1000;
+          height: 100%;
+          width: 35rem;
+          background: #1a1a1a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-flow: column;
+          text-align: center;
+        }
+        
+        header .user img {
+          height: 17rem;
+          width: 17rem;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 1rem;
+          border: 0.7rem solid var(--yellow);
+        }
+        
+        header .user .name {
+          font-size: 3.5rem;
+          color: #fff;
+        }
+        
+        header .user .post {
+          font-size: 2rem;
+          color: #eee;
+        }
+        
+        header .navbar {
+          width: 100%;
+        }
+        
+        header .navbar ul {
+          list-style: none;
+          padding: 1rem 3rem;
+        }
+        
+        header .navbar ul li a {
+          display: block;
+          padding: 1rem;
+          margin: 1.5rem 0;
+          background: #333;
+          color: #fff;
+          font-size: 2rem;
+          border-radius: 5rem;
+        }
+        
+        header .navbar ul li a:hover {
+          background: var(--yellow);
+        }
+        
+        #menu {
+          position: fixed;
+          top: 2rem;
+          right: 2rem;
+          background: #333;
+          color: #fff;
+          cursor: pointer;
+          font-size: 2.5rem;
+          padding: 1rem 1.5rem;
+          z-index: 1000;
+          display: none;
+        }
+        
+        .home {
+          display: flex;
+          justify-content: center;
+          flex-flow: column;
+          padding: 0 15rem;
+        }
+        
+        .home h3 {
+          font-size: 2.5rem;
+          color: #fff;
+        }
+        
+        .home h1 {
+          font-size: 5rem;
+          color: #fff;
+        }
+        
+        .home h1 span {
+          color: var(--yellow);
+        }
+        
+        .home p {
+          font-size: 2rem;
+          color: #eee;
+          padding: 1rem 0;
+        }
+        
+        .about .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 1rem 0;
+        }
+        
+        .about .row .info {
+          flex: 1 1 48rem;
+          padding: 2rem 1rem;
+          padding-left: 6rem;
+        }
+        
+        .about .row .info p{
+            font-size: 2rem;
+            color: #eee;
+        }
+        
+        .about .down-cv{
+            text-align: center;
+        }
+        .background .box-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 1rem 0;
+          padding-left: 3rem;
+        }
+        
+        .background .box-container .box {
+          width: 27rem;
+          margin: 4rem 1rem;
+          padding-left: 4rem;
+          border-left: 0.2rem solid #fff;
+          position: relative;
+        }
+        
+        .background .box-container .box span {
+          font-size: 1.3rem;
+          background: #222;
+          color: #fff;
+          border-radius: 5rem;
+          padding: 0.5rem 2.5rem;
+        }
+        
+        .background .box-container .box h3 {
+          font-size: 2rem;
+          color: #fff;
+          padding-top: 1.5rem;
+        }
+        
+        .background .box-container .box p {
+          font-size: 1.4rem;
+          color: #eee;
+          padding: 1rem 0;
+        }
+        
+        .background .box-container .box i {
+          position: absolute;
+          top: -1.5rem;
+          left: -2.5rem;
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;
+          line-height: 5rem;
+          text-align: center;
+          font-size: 2rem;
+          color: #fff;
+          background: var(--yellow);
+        }
+        
+        
+        .skills .skills-content .column {
+            text-align: center;
+            padding: 100px;
+        }
+        
+        .skills .skills-content{
+            color: #fff;
+            
+        }
+        
+        .skills .skills-content .right .bars {
+            margin-bottom: 15px;
+        }
+        
+        .skills .skills-content .right .info {
+            display: flex;
+            margin-bottom: 5px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .skills .skills-content .right span {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+        .skills .skills-content .right .line {
+            height: 5px;
+            width: 100%;
+            background: rgb(255, 255, 255);
+            position: relative;
+        }
+        
+        .skills .skills-content .right .line::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: var(--yellow);
+        }
+        
+        .skills-content .right .html::before {
+            width: 90%;
+        }
+        
+        .skills-content .right .css::before {
+            width: 60%;
+        }
+        
+        .skills-content .right .js::before {
+            width: 80%;
+        }
+        
+        .skills-content .right .php::before {
+            width: 50%;
+        }
+        
+        .skills-content .right .mysql::before {
+            width: 70%;
+        }
+        
+        .skills .projects{
+            text-align: center;
+        }
+        
+        .contact .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        
+        .contact .row .content {
+          flex: 1 1 30rem;
+          padding: 4rem;
+          padding-bottom: 0;
+        }
+        
+        .contact .row form {
+          flex: 1 1 45rem;
+          padding: 2rem;
+          margin: 2rem;
+          margin-bottom: 4rem;
+        }
+        
+        .contact .row form .box {
+          padding: 1.5rem;
+          margin: 1rem 0;
+          background: #3333;
+          color: #fff;
+          text-transform: none;
+          font-size: 1.7rem;
+          width: 100%;
+        }
+        
+        .contact .row form .box::placeholder {
+          text-transform: capitalize;
+        }
+        
+        .contact .row form .message {
+          height: 15rem;
+          resize: none;
+        }
+        
+        .contact .row .content .title {
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 3rem;
+          padding-bottom: 2rem;
+        }
+        
+        .contact .row .content .info h3 {
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          color: #eee;
+          padding: 1rem 0;
+          font-weight: normal;
+        }
+        
+        .contact .row .content .info h3 i {
+          padding-right: 1rem;
+          color: var(--yellow);
+        }
+        
+        .top {
+          position: fixed;
+          bottom: 7.5rem;
+          right: 2rem;
+          z-index: 100;
+          display: none;
+        }
+        
+        /* media queries  */
+        
+        @media (max-width: 1200px) {
+          html {
+            font-size: 55%;
+          }
+        
+          .home {
+            padding: 1rem 4rem;
+          }
+        }
+        
+        @media (max-width: 991px) {
+          header {
+            left: -120%;
+          }
+        
+          #menu {
+            display: block;
+          }
+        
+          header.toggle {
+            left: 0%;
+          }
+        
+          body {
+            padding: 0;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          html {
+            font-size: 50%;
+          }
+        }
+        
+        @media (max-width: 400px) {
+          header {
+            width: 100vw;
+          }
+        
+          .heading {
+            margin: 0 3rem;
+          }
+        
+          .about .row .counter .box {
+            width: 100%;
+          }
+        
+          .background .box-container .box {
+            width: 100%;
+          }
+        
+          .skills .box-container .box {
+            width: 100%;
+          }
+        
+          .contact .row form {
+            margin: 3rem 0;
+          }
+        }
+        
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+    <header>
+
+        <div class="user">
+            <img src="https://live.staticflickr.com/65535/51828469350_f39347fd11_m.jpg" alt="LOKESH GHOSH">
+            <h3 class="name">Lokesh Ghosh</h3>
+            <!-- <p class="post">front end developer</p> -->
+            <div class="post"> I'm a <span class="typing"></span></div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#background">background</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <!-- home section starts  -->
+    <section class="home" id="home">
+        <h3>HI THERE !</h3>
+        <h1>I'M <span>Lokesh Ghosh</span></h1>
+        <a href="#contact"><button class="btn">hire me <i class="fas fa-user"></i></button></a>
+        <a href="https://www.linkedin.com/in/lokeshghosh/" target="blank"><button class="btn">Linkedin <i class="fab fa-linkedin"></i></button></a>
+    </section>
+
+    <!-- about section starts  -->
+    <section class="about" id="about">
+        <h1 class="heading"> <span>about</span> me </h1>
+        <div class="row">
+            <div class="info">
+                <p>
+                    Hello!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquid pariatur veniam quidem
+                    veritatis ex culpa quae molestias soluta debitis nisi modi quaerat eum quia corporis aliquam et
+                    accusantium quisquam consequatur dignissimos, nam ipsa mollitia eos amet. At magnam doloremque
+                    consequuntur sint aliquid sequi non, dolores excepturi rerum et, quo repellendus? Dolorum deleniti,
+                    at deserunt voluptates quo minima soluta inventore quia sint cumque ipsa eveniet facere illo aliquid
+                    possimus sed vitae? Tempora magnam dolorum saepe, illum esse vitae, odio fugiat quo molestias
+                    dignissimos quia omnis soluta. Vero quam nostrum blanditiis repellat, ab iusto, est facilis aut
+                    reiciendis molestiae eveniet ex.
+                </p>
+            </div>
+        </div>
+        <div class="down-cv">
+            <a href="#"><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
+        </div>
+    </section>
+
+    <!-- background section starts  -->
+    <section class="background" id="background">
+
+        <h1 class="heading"> my <span>background</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2016</span>
+                <h3>front end development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem
+                    provident laborum quae, distinctio eaque temporibus!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2017</span>
+                <h3>front end development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem
+                    provident laborum quae, distinctio eaque temporibus!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2018</span>
+                <h3>front end development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem
+                    provident laborum quae, distinctio eaque temporibus!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2019</span>
+                <h3>front end development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem
+                    provident laborum quae, distinctio eaque temporibus!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2020</span>
+                <h3>front end development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem
+                    provident laborum quae, distinctio eaque temporibus!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2021</span>
+                <h3>front end development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem
+                    provident laborum quae, distinctio eaque temporibus!</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- skills section starts  -->
+    <section class="skills" id="skills">
+
+        <h1 class="heading"> my <span>skills</span> </h1>
+        <div class="skills-content">
+            <div class="column right">
+                <div class="bars">
+                    <div class="info">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="line html"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>CSS</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="line css"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>JavaScript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="line js"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>PHP</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="line php"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>MySQL</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="line mysql"></div>
+                </div>
+            </div>
+            <div class="projects">
+                <a href="#"><button class="btn"> PROJECTS </button></a>
+            </div>
+
+    </section>
+
+    <!-- contact section starts  -->
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact</span> me </h1>
+
+        <div class="row">
+
+            <div class="content">
+
+                <h3 class="title">contact info</h3>
+
+                <div class="info">
+                    <h3> <i class="fas fa-envelope"></i> LGHOSH857@GMAIL.COM </h3>
+                    <h3> <i class="fas fa-phone"></i> +91 9775140484 </h3>
+                    <h3> <i class="fas fa-map-marker-alt"></i> KOLKATA, WEST BENGAL, INDIA </h3>
+                </div>
+
+            </div>
+
+            <form action="">
+
+                <input type="text" placeholder="name" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="text" placeholder="subject" class="box">
+                <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+                <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- scroll top button  -->
+    <a href="#home" class="top">
+        <img src="images/scroll-top-img.png" alt="">
+    </a>
+
+    <!-- javascript starts -->
+    <script>
+        $(document).ready(function () {
+
+            $('#menu').click(function () {
+                $(this).toggleClass('fa-times');
+                $('header').toggleClass('toggle');
+            });
+
+            $(window).on('scroll load', function () {
+
+                $('#menu').removeClass('fa-times');
+                $('header').removeClass('toggle');
+
+                if ($(window).scrollTop() > 0) {
+                    $('.top').show();
+                } else {
+                    $('.top').hide();
+                }
+
+            });
+
+            var typed = new Typed(".typing", {
+                strings: ["Web Developer", "Web Designer", "Freelancer"],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true
+            });
+
+            // smooth scrolling 
+
+            $('a[href*="#"]').on('click', function (e) {
+
+                e.preventDefault();
+
+                $('html, body').animate({
+
+                    scrollTop: $($(this).attr('href')).offset().top,
+
+                },
+                    500,
+                    'linear'
+                );
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

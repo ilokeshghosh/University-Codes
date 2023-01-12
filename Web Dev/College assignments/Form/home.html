@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h2>This is form </h2>
+
+    <form action="Lokesh.php">
+
+
+        <div>
+            <label for="name"> Name</label>
+            <input type="text" name="My name" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="bonus"> Bonus :</label>
+            <input type="number" name="My bonus" id="bonus">
+        </div>
+        <br>
+        <div>
+            <label for="roll"> Roll :</label>
+            <input type="text" name="My roll" id="roll">
+        </div>
+        <br>
+        <div>
+            <label for="date"> Date : </label>
+            <input type="date" name="Submitted date" id="date">
+        </div>
+        <br>
+        <div>
+            <label for="eligibility"> Are you above 18 :</label>
+            <input type="checkbox" name="my eligibility" id="eligibility">
+        </div>
+        <br>
+        <div>
+            <label for="textarea">Write Your Thoughts below : </label>
+            <br> <textarea name="Thoughts" cols="30" rows="10" id="textarea"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="country "></label>
+        </div>
+        <br>
+
+        <div>
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            
+        </div>
+        <br>
+        <div>
+
+            Gender : <label for="male">Male: </label> <input type="radio" name="My gender" id="male">
+            <label for="female">FeMale</label> <input type="radio" name="My gender" id="female">
+            <label for="Others">Others</label> <input type="radio" name="My gender" id="Others">
+        </div>
+        <br>
+        <input type="submit" value="Submit The Form">
+        <input type="reset" value="Reset The Form">
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- <link rel="stylesheet" href="style-about.css"> -->
+
+    <style>
+        *{
+    margin: 0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+body{
+    
+    background-image: url(back4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    font-family: sans-serif;
+    font-size: 25px;
+    
+    
+}
+.bar{
+    border: 5px solid white;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+.bar ul{
+    
+    display: inline-flex;
+    list-style: none;
+}
+.bar ul li
+{
+   
+    width: 120px;
+    margin:15px;
+    padding:15px;
+    
+
+}
+.bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.active3,.bar ul li:hover
+{
+    background:grey;
+    border-radius:40px
+
+}
+.sub-bar1{
+  display: none; 
+ 
+}
+.bar ul li:hover .sub-bar1{
+    display: block;
+    position:absolute;
+    background: grey;
+    border:2px solid white;
+   
+    border-radius: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+
+}
+.bar ul li:hover .sub-bar1 ul{
+   
+    display: block;
+    margin: 10px;
+    
+}
+.bar ul li:hover .sub-bar1 ul li{
+    
+    width:150px;
+    padding:10px;
+    border-bottom:1px dotted white ;
+    background: transparent;
+}
+.bar ul li:hover .sub-bar1 ul li:last-child{
+    border-bottom: none;  
+}
+.bar ul li:hover .sub-bar1 ul li a:hover{
+    color: black;
+}
+
+
+/* content */
+
+.avi{
+    color:whitesmoke;
+    text-align: center;
+   
+    margin-top: 30px;
+    font-family: cursive;
+    font-size: 100px;
+}
+
+.con{
+    border: 5px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    margin:100px 500px 50px 500px  ;
+}
+.con p{
+    color: white;
+  
+ 
+   
+}
+    </style>
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li class="active"> <a href="Menu.html"><img src="Home-logo.png"></a></li>
+
+            <li class="active2"> <a href="list.html"><img src="list.png"></a>
+                <div class="sub-bar1">
+                    <ul>
+                        <li><a href="nature.html">Nature</a></li>
+                        <li><a href="ocean.html">Ocean</a></li>
+                        <li><a href="space.html">Space</a></li>
+                        <li><a href="animal.html">Animal</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="active3"> <a href="about.html"><img src="info.png"></a></li>
+            <li> <a href="contact.html"><img src="phon.png"/></a></li>
+        </ul>
+
+       
+    </div>
+
+   
+
+    <!-- About content -->
+
+    <div class="con">
+        <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><em><span style='font-size:27px;font-family:"Comic Sans MS";'>NAME: &nbsp;Lokesh Ghosh</span></em></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><em><span style='font-size:27px;font-family:"Comic Sans MS";'>COURSE : BCA (2nd Year)</span></em></strong><span style='font-size:27px;font-family:"Comic Sans MS";'>&nbsp;</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><em><span style='font-size:27px;font-family:"Comic Sans MS";'>Email ID :&nbsp;</span></em></strong><a href="mailto:ghoshlokesh57@gmail.com" target="_blank"><strong><em><span style='font-size:27px;font-family:"Comic Sans MS";color:#adadad;'>ghoshlokesh57@gmail.com</span></em></strong></a><span style='font-size:15px;font-family:"Comic Sans MS";'>&nbsp;</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><em><span style='font-size:27px;font-family:"Comic Sans MS";'>Subject : Web Development Assignment</span></em></strong></p>
+    </div>
+</body>
+</html>
