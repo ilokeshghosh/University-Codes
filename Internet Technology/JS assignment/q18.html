@@ -1,0 +1,34 @@
+<!-- 18.Write a program in JavaScript for checkbox validation. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox validation</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="return checkCheckBoxes(this);">
+        <p><input type="CHECKBOX" name="MyCheckbox" value="This..."></p>
+        <p><input type="SUBMIT"></p>
+        <p id="alert"></p>
+    </form>
+
+    <script>
+        function checkCheckBoxes(theForm) {
+            if (
+                theForm.MyCheckbox.checked == false) {
+                    document.getElementById("alert").innerHTML="Not Cheaked";
+                    document.getElementById("alert").style.color="red";
+                return false;
+            } else {
+                document.getElementById("alert").innerHTML="Cheaked";
+                document.getElementById("alert").style.color="green";
+            }
+        }
+    </script>
+</body>
+
+</html>

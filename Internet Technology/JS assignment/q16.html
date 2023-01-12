@@ -1,0 +1,39 @@
+<!-- 16.Write a program in JavaScript to disable mouse right click. -->
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Disable right click on my web page
+		</title>
+	</head>
+	
+	<body style = "text-align:center;">
+		
+		<h1>
+			Click on the button to disable right click
+		</h1>
+		
+		
+		<button onclick = "run_func()">
+			Disable
+		</button>
+		
+		<p id = "down" style =
+			"color:green; font-size: 20px; font-weight: bold;">
+		</p>
+		
+		<script>
+			var el_up = document.getElementById("up");
+			var el_down = document.getElementById("down");
+			el_up.innerHTML = "Click on the button to disable right click";
+			
+			function run_func() {
+				document.addEventListener('contextmenu',
+						event => event.preventDefault());
+				el_down.innerHTML = "Right click disabled";
+			}		
+		</script>
+	</body>
+</html>					

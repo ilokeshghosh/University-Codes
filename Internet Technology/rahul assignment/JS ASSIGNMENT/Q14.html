@@ -1,0 +1,36 @@
+<!-- Write a program in JavaScript to validate an ip address. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript form validation - checking ip address</title>
+</head>
+
+<body>
+    <h2>Input Ip addres</h2>
+    <form name="form1" action="#">
+        <ul>
+            <input type='text' name='text1' />
+            <input type="submit" name="submit" value="Submit" onclick="ValidateIPaddress(document.form1.text1)" />
+        </ul>
+    </form>
+    <script>
+        function ValidateIPaddress(inputText) {
+            var IP = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+            if (inputText.value.match(IP)) {
+                alert("Valid IP");
+                document.form1.text1.focus();
+                return true;
+            }
+            else {
+                alert("Invalid IP");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

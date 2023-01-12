@@ -1,0 +1,24 @@
+<!-- Write a program in JavaScript to convert from Celsius to Fahrenheit. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Celsius to Fahrenheit Temperature Converter</title>
+</head>
+
+<body>
+  <p>
+    <label>Celsius</label>
+    <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)"
+      onchange="temperatureConverter(this.value)">
+  </p>
+  <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+  <script>
+    function temperatureConverter(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("outputFahrenheit").innerHTML = (valNum * 1.8) + 32;
+    }
+  </script>
+</body>
+
+</html>

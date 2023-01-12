@@ -1,0 +1,25 @@
+<!-- 11. Write a program in JavaScript to perform the textbox required validation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm"  action=" "onsubmit="return validateTheForm()" method="post"> 
+    Name: <input type="text" name="Name">
+    <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateTheForm(){
+            let x=document.forms["myForm"]["Name"].value;
+            if(x==""){
+                alert("Please Fill all the field");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

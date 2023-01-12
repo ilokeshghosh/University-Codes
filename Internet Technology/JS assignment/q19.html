@@ -1,0 +1,28 @@
+<!-- 19.Write a program in JavaScript to check whether a radio button is selected
+or not. -->
+
+<html>
+
+<body>
+    <input type="radio" id="Radio" value="Radio">Radio
+    <button type="button" onclick=" checkButton()"> Submit </button>
+    <h3 id="aleart" style="color:green"> </h3>
+</body>
+
+<script>
+    function checkButton() {
+        if (document.getElementById('Radio').checked) {
+            document.getElementById("aleart").innerHTML
+                = document.getElementById("Radio").value
+                + " is checked";
+        }
+        else {
+            document.getElementById("aleart").innerHTML
+                = "Radio is not checked";
+            document.getElementById("aleart").style.color
+                = "red";
+        }
+    } 
+</script>
+
+</html>

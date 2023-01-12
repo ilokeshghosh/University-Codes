@@ -1,0 +1,32 @@
+<!-- Write a program in JavaScript to show the use of break and continue. -->
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- break  -->
+    <h2>A loop with a <u>Break</u> statement.</h2>
+    <p id="demo1"></p>
+    <!-- continue -->
+    <h2>A loop with a <u>Continue</u> statement.</h2>
+    <p>A loop which will skip the step where i = 3.</p>
+    <p id="demo2"></p>
+    <script>
+        // break 
+        let text1 = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { break; }
+            text1 += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+        // continue
+        let text2 = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { continue; }
+            text2 += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+
+</body>
+
+</html>

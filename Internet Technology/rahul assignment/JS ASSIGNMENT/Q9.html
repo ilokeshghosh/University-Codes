@@ -1,0 +1,30 @@
+<!-- Write a program in JavaScript to display prompt box. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display prompt box</title>
+</head>
+
+<body>
+
+    <h1>The Window Object</h1>
+    <h2>The prompt() Method</h2>
+
+    <button onclick="myFunction()">Click Here</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let person = prompt("Please enter your name", "Rahul Dutta");
+            if (person != null) {
+                document.getElementById("demo").innerHTML =
+                    "Hello " + person;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

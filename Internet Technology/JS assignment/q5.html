@@ -1,0 +1,39 @@
+<!--5. Write a program in JavaScript to concatenate two arrays. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="oldcar">
+        These are old car List
+    </h3>
+    <p id="oldcarcontent"></p>
+
+    <h3 class="Newcar">
+        These are new car List
+    </h3>
+    <p id="newcarcontent"></p>
+
+    <h3 class="Newcar">
+        These are all car List
+    </h3>
+    <p id="allcarcontent"></p>
+    <script>
+        let newcar=["Tata Nexon ", " Mahindra Thar  . "];
+        let oldcar=[" Honda City  ", "  MS Alto 800"];
+
+        
+        let totalcar=newcar+oldcar;
+
+      
+        document.getElementById("oldcarcontent").innerHTML=oldcar;
+        document.getElementById("newcarcontent").innerHTML=newcar;
+        document.getElementById("allcarcontent").innerHTML=totalcar;
+        console.log(totalcar);
+    </script>
+</body>
+</html>

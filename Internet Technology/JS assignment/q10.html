@@ -1,0 +1,23 @@
+<!-- 10. Write a program in JavaScript to show the use of onkeypress event. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>On clicking in the text box a function will trigger</h3>
+    <input type="text" onkeypress="trigger()">
+    <h3 id="trig"></h3>
+    <script>
+        function trigger(){
+        
+            document.getElementById("trig").innerHTML="This is effect after clicking in the text box";
+        }
+
+    </script>
+</body>
+</html>
