@@ -1,0 +1,1 @@
+print("Printing current and previous number sum is na range",b-1)
